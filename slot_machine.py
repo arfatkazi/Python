@@ -73,6 +73,11 @@ def main():
 
         current_balance += payout
 
+        play_again = input("Do you want to play again? (Y/N): ")
+
+        if play_again.upper() != 'Y':
+            break
+
     print("Game over! You're out of money.")
 
 if __name__ == '__main__':
