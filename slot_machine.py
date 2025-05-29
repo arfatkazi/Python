@@ -79,6 +79,10 @@ def main():
             break
 
     print("Game over! You're out of money.")
+    print()
+    print("***********************************")
+    print(f"Your final balance is ₹{current_balance}")
+    print("***********************************")
 
 if __name__ == '__main__':
     main()
