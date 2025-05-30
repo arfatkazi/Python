@@ -64,17 +64,18 @@ def main():
         print_row(row)
 
         payout = get_payout(row,bet)
-        print(payout)
 
         if payout > 0:
             print(f"You won ₹{payout}!\n")
+            
         else:
             print("No match. Better luck next time!\n")
 
         current_balance += payout
 
         play_again = input("Do you want to play again? (Y/N): ")
-
+        print()
+        print()
         if play_again.upper() != 'Y':
             break
 
