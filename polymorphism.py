@@ -57,78 +57,129 @@
 # Duck Typing
 
 # static method using direct class it doesn't depend on object
-class Employee:
-    def __init__(self,name,position):
-        self.name = name
-        self.position = position
+# class Employee:
+#     def __init__(self,name,position):
+#         self.name = name
+#         self.position = position
 
 
-    def get_info(self):
-        print(f"{self.name} = {self.position}")
+#     def get_info(self):
+#         print(f"{self.name} = {self.position}")
 
-    @staticmethod
-    def is_valid_position(position):
-        valid_position = ["Data Analyst","Data science","AI/ML","Android Developer"]
-        return position in valid_position
+#     @staticmethod
+#     def is_valid_position(position):
+#         valid_position = ["Data Analyst","Data science","AI/ML","Android Developer"]
+#         return position in valid_position
     
 
 
 
-employee1 = Employee("Raj","Actor")
-employee2 = Employee("Aiyaan","Data science")
-employee3 = Employee("furkan","Data Analyst")
+# employee1 = Employee("Raj","Actor")
+# employee2 = Employee("Aiyaan","Data science")
+# employee3 = Employee("furkan","Data Analyst")
 
 
 
 
-# print(Employee.is_valid_position('Data science'))
+# # print(Employee.is_valid_position('Data science'))
 
 
-print(employee1.name)
-print(employee1.position)
+# print(employee1.name)
+# print(employee1.position)
 
-employee1.get_info()
-employee2.get_info()
-employee3.get_info()
-
-
-
-# class method
-
-
-class Student:
-    count  = 0
-    total_gpa = 0
-
-    def __init__(self,name,gpa):
-        self.name = name
-        self.gpa = gpa
-        Student.count +=1
-        Student.total_gpa += gpa
+# employee1.get_info()
+# employee2.get_info()
+# employee3.get_info()
 
 
 
-    def get_info(self):
-        return f"{self.name} {self.gpa}"
+# # class method
+
+
+# class Student:
+#     count  = 0
+#     total_gpa = 0
+
+#     def __init__(self,name,gpa):
+#         self.name = name
+#         self.gpa = gpa
+#         Student.count +=1
+#         Student.total_gpa += gpa
+
+
+
+#     def get_info(self):
+#         return f"{self.name} {self.gpa}"
     
-    @classmethod
-    def get_count(cls):
-        return f"total # of students: {cls.count}"
+#     @classmethod
+#     def get_count(cls):
+#         return f"total # of students: {cls.count}"
     
-    @classmethod
-    def get_average_gpa(cls):
-        if cls.count == 0:
-            return 0
-        else:
-            return f"{cls.total_gpa / cls.count}"
+#     @classmethod
+#     def get_average_gpa(cls):
+#         if cls.count == 0:
+#             return 0
+#         else:
+#             return f"{cls.total_gpa / cls.count}"
 
-student1 = Student("Arfat",7.5)
-student2 = Student("Aiyaan",5.5)
+# student1 = Student("Arfat",7.5)
+# student2 = Student("Aiyaan",5.5)
 
-print(Student.get_count())
-print(Student.get_average_gpa())
+# print(Student.get_count())
+# print(Student.get_average_gpa())
 
 
 
 
 # magic method
+
+# class Book:
+#     def __init__(self,title,author,num_pages):
+#         self.title = title
+#         self.author = author
+#         self.num_pages = num_pages
+
+#     # def __str__(self):
+#     #     return f"📘 '{self.title}' by {self.author} — {self.num_pages} pages"
+
+#     def __lt__(self,other):
+#         return self.num_pages < other.num_pages
+#     def __add__(self,other):
+#         return self.num_pages + other.num_pages
+
+#     def __contains__(self,keyword):
+#         return keyword in self.title
+
+#     def __getitem__(self,key):
+#         if key == 'title':
+#             return self.title
+#         elif key == 'author':
+#             return self.author
+#         elif key == 'num_pages':
+#             return self.num_pages
+#         else:
+#             return f"Not a valid key"
+
+# book1 = Book("2 states",'arfat kazi',300)
+# book2 = Book("fift shades of grey",'aiyaan kazi',800)
+# book3 = Book("john wick",'ovais',600)
+
+
+
+
+# print(book1 < book2)
+# print(book2< book3)
+# print(book3 < book1)
+
+# print(book3 < book1)
+# # add
+# print(book3 + book1)
+# print(book1 + book2)
+# print(book2 + book3)
+
+
+# print('2 states' in book1)
+# print('lion' in book1)
+
+
+# print(book1['num_pag'])
