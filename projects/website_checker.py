@@ -7,9 +7,9 @@ def website_checker():
                 print("👋 Exiting...  Goodbye!")
                 break
 
-            if url_input.startswith('https'):
+            if url_input.startswith('https://'):
                 print("✅ This website uses HTTPS (secure)")
-            elif url_input.startswith('http'):
+            elif url_input.startswith('http://'):
                 print("💀 This website uses HTTP (not secure)")
             else:
                 print("❌ This doesn't look like a complete URL.")
